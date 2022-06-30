@@ -1,9 +1,12 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
 	export let item: DossierItem;
+
+	$: y = Math.max(item.size.y || 1, 1);
+	$: x = Math.max(item.size.x || 8, 3);
 </script>
 
-<div class="comp" style="grid-area: span {item.size.y || 1} / span {item.size.x || 8}">
+<div class="comp" style="grid-area: span {y} / span {x}">
 	<label for="">{item.label}</label>
 	<input type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder" />
 </div>

@@ -2,13 +2,13 @@
 	import type { DossierItem } from '$lib/app/data';
 	export let item: DossierItem;
 
-	$: y = Math.max(item.size.y || 2, 2);
-	$: x = Math.max(item.size.x || 11, 3);
+	$: y = Math.max(item.size.y || 5, 3);
+	$: x = Math.max(item.size.x || 17, 3);
 </script>
 
 <div class="comp" style="grid-area: span {y} / span {x}">
 	<label for="">{item.label}</label>
-	<input type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder" />
+	<textarea type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder" />
 </div>
 
 <style lang="scss">
@@ -18,23 +18,25 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		grid-area: span 2 / span 11;
+		grid-area: span 5 / span 17;
 		padding: 5px;
 
 		label {
 			font-size: 0.8em;
 		}
 
-		input {
+		textarea {
 			border: none;
-			border-bottom: 1px solid #000;
 			font-family: inherit;
 			font-size: 0.8em;
+			flex: 1 1;
 			margin: 0;
 			margin-top: 5px;
 			max-width: 100%;
 			overflow: hidden;
 			text-overflow: ellipsis;
+
+			resize: none;
 		}
 	}
 </style>

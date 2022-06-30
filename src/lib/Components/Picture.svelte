@@ -1,9 +1,12 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
 	export let item: DossierItem;
+
+	$: y = Math.max(item.size.y || 8, 2);
+	$: x = Math.max(item.size.x || 6, 2);
 </script>
 
-<div class="comp" style="grid-area: span {item.size.y || 8} / span {item.size.x || 6}">
+<div class="comp" style="grid-area: span {y} / span {x}">
 	<img src={item.value} alt={item.label} />
 </div>
 

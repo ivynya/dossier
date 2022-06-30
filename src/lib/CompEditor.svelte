@@ -11,6 +11,7 @@
 		<select id="{item.label}-type" bind:value={item.type}>
 			<option value="label">Label</option>
 			<option value="label-inline">Label Inline</option>
+			<option value="paragraph">Paragraph</option>
 			<option value="picture">Picture</option>
 			<option value="title">Title</option>
 		</select>

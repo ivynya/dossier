@@ -3,6 +3,7 @@
 	import Label from '$lib/Components/Label.svelte';
 	import LabelInline from '$lib/Components/LabelInline.svelte';
 	import Picture from '$lib/Components/Picture.svelte';
+	import Paragraph from './Components/Paragraph.svelte';
 	import Title from './Components/Title.svelte';
 
 	let active = false;
@@ -16,6 +17,8 @@
 			<Label {item} />
 		{:else if item.type === 'label-inline'}
 			<LabelInline {item} />
+		{:else if item.type === 'paragraph'}
+			<Paragraph {item} />
 		{:else if item.type === 'picture'}
 			<Picture {item} />
 		{:else if item.type === 'title'}
