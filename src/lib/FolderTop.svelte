@@ -81,5 +81,7 @@
 		opacity: 1;
 		transition-delay: 0.6s;
 		transition-duration: 0.3s;
+
+		transform: rotate(-5deg);
 	}
 </style>
