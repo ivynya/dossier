@@ -1,4 +1,22 @@
-<section class="dossier-page">content</section>
+<script>
+	import Label from './Components/Label.svelte';
+	import LabelInline from './Components/LabelInline.svelte';
+	import Picture from './Components/Picture.svelte';
+	import Square from './Components/Square.svelte';
+</script>
+
+<section class="dossier-page">
+	<Label />
+	<Picture />
+	<Label />
+	<Label />
+	<Label />
+	<LabelInline />
+	<LabelInline />
+	{#each Array(75) as _}
+		<Square />
+	{/each}
+</section>
 
 <style>
 	.dossier-page {
@@ -9,6 +27,9 @@
 
 		display: grid;
 		grid-area: 1/1;
+
+		grid-template-columns: repeat(17, 1fr);
+		grid-template-rows: repeat(25, 1fr);
 
 		margin: 7%;
 		margin-right: 8%;

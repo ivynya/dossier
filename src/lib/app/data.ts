@@ -7,6 +7,8 @@ export interface Dossier {
 
 export interface DossierItem {
   label: string
+  sort: number
+  type: string
 }
 
 export const dossier = writable<Dossier>({name: "Dossier", items: []});
