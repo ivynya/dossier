@@ -6,6 +6,28 @@
 <Cover />
 
 <style lang="scss" global>
+	:root {
+		font-size: 10px;
+	}
+
+	@media (min-width: 992px) {
+		:root {
+			font-size: 12px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		:root {
+			font-size: 14px;
+		}
+	}
+
+	@media (min-width: 1500px) {
+		:root {
+			font-size: 16px;
+		}
+	}
+
 	body {
 		font-family: itc-american-typewriter, monospace;
 
