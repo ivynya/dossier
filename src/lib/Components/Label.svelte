@@ -1,12 +1,11 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
-
 	export let item: DossierItem;
 </script>
 
-<div class="comp">
+<div class="comp" style="grid-area: span {item.size.y || 2} / span {item.size.x || 11}">
 	<label for="">{item.label}</label>
-	<input type="text" name="" id="" spellcheck="false" placeholder="Placeholder" />
+	<input type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder" />
 </div>
 
 <style lang="scss">

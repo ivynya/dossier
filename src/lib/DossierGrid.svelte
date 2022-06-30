@@ -10,12 +10,7 @@
 	let rotation = Math.random() * 3 - 1.5;
 </script>
 
-<section
-	class="dossier-page"
-	style="transform: rotate({rotation}deg);"
-	class:active
-	on:click={() => (active = !active)}
->
+<section class="dossier-page" style="transform: rotate({rotation}deg);" class:active>
 	{#each $dossier.items as item}
 		{#if item.type === 'label'}
 			<Label {item} />

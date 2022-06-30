@@ -1,11 +1,10 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
-
 	export let item: DossierItem;
 </script>
 
-<div class="comp">
-	<img src="https://place-hold.it/150x150" alt={item.label} />
+<div class="comp" style="grid-area: span {item.size.y || 8} / span {item.size.x || 6}">
+	<img src={item.value} alt={item.label} />
 </div>
 
 <style lang="scss">

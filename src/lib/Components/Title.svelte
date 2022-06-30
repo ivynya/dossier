@@ -1,10 +1,9 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
-
 	export let item: DossierItem;
 </script>
 
-<div class="comp">
+<div class="comp" style="grid-area: span {item.size.y || 2} / span {item.size.x || 17}">
 	<h1>{item.label}</h1>
 </div>
 
