@@ -89,8 +89,11 @@
 		background-color: #000;
 		box-sizing: border-box;
 		color: #fff;
+		max-height: 100vh;
 		padding: 20px 60px;
 		width: 500px;
+
+		overflow-y: scroll;
 
 		h2 {
 			font-size: 2rem;
