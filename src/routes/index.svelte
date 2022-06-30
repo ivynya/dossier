@@ -1,7 +1,23 @@
 <script>
+	import { dossier } from '$lib/app/data';
+	import CompEditor from '$lib/CompEditor.svelte';
 	import DossierGrid from '$lib/DossierGrid.svelte';
 	import FolderBottom from '$lib/FolderBottom.svelte';
 	import FolderTop from '$lib/FolderTop.svelte';
+
+	function addItem() {
+		dossier.set({
+			...$dossier,
+			items: [
+				...$dossier.items,
+				{
+					label: 'New Item',
+					type: 'label',
+					sort: 10
+				}
+			]
+		});
+	}
 </script>
 
 <main>
@@ -16,6 +32,10 @@
 	</section>
 	<section class="editor">
 		<h2>Edit Dossier</h2>
+		{#each $dossier.items as item}
+			<CompEditor bind:item />
+		{/each}
+		<button on:click={addItem}>Add Item</button>
 	</section>
 </main>
 

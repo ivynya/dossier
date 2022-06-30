@@ -1,5 +1,11 @@
+<script lang="ts">
+	import type { DossierItem } from '$lib/app/data';
+
+	export let item: DossierItem;
+</script>
+
 <div class="comp">
-	<label for="">Label</label>
+	<label for="">{item.label}</label>
 	<input type="text" name="" id="" spellcheck="false" placeholder="Placeholder" />
 </div>
 

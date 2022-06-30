@@ -5,25 +5,21 @@
 </script>
 
 <div class="comp">
-	<img src="https://place-hold.it/150x150" alt={item.label} />
+	<h1>{item.label}</h1>
 </div>
 
 <style lang="scss">
 	.comp {
-		border: 1px solid #000;
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		grid-area: span 8 / span 6;
+		grid-area: span 2 / span 17;
 		padding: 5px;
 
-		img {
-			border-radius: 5px;
-			box-shadow: 0 0 10px #0003;
-			max-height: 100%;
-			max-width: 100%;
-			transform: rotate(-2deg);
+		h1 {
+			margin: 0;
+			text-align: center;
 		}
 	}
 </style>

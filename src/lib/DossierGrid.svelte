@@ -1,8 +1,9 @@
 <script>
-	import Label from './Components/Label.svelte';
-	import LabelInline from './Components/LabelInline.svelte';
-	import Picture from './Components/Picture.svelte';
-	import Square from './Components/Square.svelte';
+	import { dossier } from '$lib/app/data';
+	import Label from '$lib/Components/Label.svelte';
+	import LabelInline from '$lib/Components/LabelInline.svelte';
+	import Picture from '$lib/Components/Picture.svelte';
+	import Title from './Components/Title.svelte';
 
 	let active = false;
 
@@ -15,15 +16,16 @@
 	class:active
 	on:click={() => (active = !active)}
 >
-	<Label />
-	<Picture />
-	<Label />
-	<Label />
-	<Label />
-	<LabelInline />
-	<LabelInline />
-	{#each Array(75) as _}
-		<Square />
+	{#each $dossier.items as item}
+		{#if item.type === 'label'}
+			<Label {item} />
+		{:else if item.type === 'label-inline'}
+			<LabelInline {item} />
+		{:else if item.type === 'picture'}
+			<Picture {item} />
+		{:else if item.type === 'title'}
+			<Title {item} />
+		{/if}
 	{/each}
 </section>
 
