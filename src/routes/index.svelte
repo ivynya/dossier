@@ -55,6 +55,8 @@
 	</section>
 	<section class="editor">
 		<h2>Edit Dossier</h2>
+		<label for="dossier-name">Dossier Name</label>
+		<input id="dossier-name" type="text" bind:value={$dossier.name} />
 		{#each $dossier.items as item}
 			<CompEditor bind:item />
 		{/each}
