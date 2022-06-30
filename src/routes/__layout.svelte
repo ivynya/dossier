@@ -1,4 +1,9 @@
+<script>
+	import Cover from './_cover.svelte';
+</script>
+
 <slot />
+<Cover />
 
 <style lang="scss" global>
 	body {
