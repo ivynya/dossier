@@ -1,19 +1,17 @@
 <script>
 	import DossierGrid from '$lib/DossierGrid.svelte';
-
 	import FolderBottom from '$lib/FolderBottom.svelte';
-	import FolderLabel from '$lib/FolderLabel.svelte';
 	import FolderTop from '$lib/FolderTop.svelte';
-
-	let active = false;
 </script>
 
 <main>
-	<section class="dossier" on:click={() => (active = !active)}>
+	<section class="dossier">
 		<div class="container">
 			<FolderBottom />
 			<DossierGrid />
-			<FolderTop {active} />
+			<DossierGrid />
+			<DossierGrid />
+			<FolderTop />
 		</div>
 	</section>
 	<section class="editor">

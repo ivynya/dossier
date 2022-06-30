@@ -3,9 +3,18 @@
 	import LabelInline from './Components/LabelInline.svelte';
 	import Picture from './Components/Picture.svelte';
 	import Square from './Components/Square.svelte';
+
+	let active = false;
+
+	let rotation = Math.random() * 3 - 1.5;
 </script>
 
-<section class="dossier-page">
+<section
+	class="dossier-page"
+	style="transform: rotate({rotation}deg);"
+	class:active
+	on:click={() => (active = !active)}
+>
 	<Label />
 	<Picture />
 	<Label />
@@ -18,11 +27,11 @@
 	{/each}
 </section>
 
-<style>
+<style lang="scss">
 	.dossier-page {
 		background-color: #fff;
 		border-radius: 5px;
-		box-shadow: 0 0 15px #0001;
+		box-shadow: 0 0 15px #0002;
 		box-sizing: border-box;
 
 		display: grid;
@@ -37,5 +46,15 @@
 		padding: 20px;
 
 		transform: rotate(1deg);
+
+		position: relative;
+
+		transform-origin: left center;
+		transition-duration: 1s;
+		transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+		&.active {
+			transform: scaleX(-1) translateX(10%) !important;
+			z-index: 5;
+		}
 	}
 </style>
