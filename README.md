@@ -1,26 +1,38 @@
-# dossier - [app.ivy.direct](https://app.ivy.direct/dossier)
+# create-svelte
 
-Make, save, and share your own government-style dossiers! For entertainment purposes and personal use only.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-- Create your own dossier at [app.ivy.direct/dossier/edit](https://app.ivy.direct/dossier/edit)
-- Add text and pictures to your dossier with the grid-based designer
-- Download the .dossier file and share it with friends!
-- Open friend's dossier files at [https://app.ivy.direct/dossier](https://app.ivy.direct/dossier).
+## Creating a project
 
-## Editing
+If you're seeing this, you've probably already done this step. Congrats!
 
-**Inserting Text**
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-To insert text, click `Add Item` and select an option, and optionally, a size.
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-**Inserting Pictures**
+## Developing
 
-To get a picture to show up, enter an image url (like https://example.com/image.png) into the `value` field.
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-**Saving your Dossier**
+```bash
+npm run dev
 
-Click `Download Dossier` in the editor to save it as a file to share!
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## Gallery
+## Building
 
-<img width="80%" alt="image" src="https://user-images.githubusercontent.com/35588499/176787406-4f4b3c02-3fbe-44c2-91a1-bc75d497e842.png">
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

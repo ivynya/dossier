@@ -10,7 +10,7 @@
 			$dossier = JSON.parse(r.result as string);
 		};
 
-		r.readAsText((document.querySelector('#dossier-upload') as HTMLInputElement).files[0]);
+		r.readAsText((document.querySelector('#dossier-upload') as HTMLInputElement).files![0]);
 	}
 </script>
 
