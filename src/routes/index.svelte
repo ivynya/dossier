@@ -30,7 +30,7 @@
 		<br />
 		<h4>2. Tap folder to open</h4>
 		<br />
-		<p><a href="/edit">&gt; Make your own!</a></p>
+		<p><a href="./edit">&gt; Make your own!</a></p>
 	</section>
 </main>
 
