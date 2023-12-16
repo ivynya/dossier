@@ -1,10 +1,11 @@
-# dossier - [ds.ivy.direct](http://ds.ivy.direct)
+# dossier - [app.ivy.direct](https://app.ivy.direct/dossier)
 
 Make, save, and share your own government-style dossiers! For entertainment purposes and personal use only.
 
-- Create your own dossier at [ds.ivy.direct/edit](http://ds.ivy.direct/edit)
+- Create your own dossier at [app.ivy.direct/dossier/edit](https://app.ivy.direct/dossier/edit)
 - Add text and pictures to your dossier with the grid-based designer
-- Download the .dossier file and share it with the link [ds.ivy.direct](http://ds.ivy.direct)!
+- Download the .dossier file and share it with friends!
+- Open friend's dossier files at [https://app.ivy.direct/dossier](https://app.ivy.direct/dossier).
 
 ## Editing
 
