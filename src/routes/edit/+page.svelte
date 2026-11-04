@@ -60,13 +60,13 @@
 		{#each $dossier.items as item}
 			<CompEditor bind:item />
 		{/each}
-		<button on:click={addItem}>Add Item</button>
-		<button on:click={() => download('mydossier.dossier', JSON.stringify($dossier))}>
+		<button onclick={addItem}>Add Item</button>
+		<button onclick={() => download('mydossier.dossier', JSON.stringify($dossier))}>
 			Download Dossier
 		</button>
 		<br /><br />
 		<label for="dossier-upload">Upload Dossier</label>
-		<input type="file" name="" id="dossier-upload" on:change={read} />
+		<input type="file" name="" id="dossier-upload" onchange={read} />
 	</section>
 </main>
 

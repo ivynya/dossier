@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { dossier } from '$lib/app/data';
-	export let active = false;
+	interface Props {
+		active?: boolean;
+	}
+
+	let { active = $bindable(false) }: Props = $props();
 </script>
 
-<div class:active on:click={() => (active = !active)}>
+<div class:active onclick={() => (active = !active)}>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"

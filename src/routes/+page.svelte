@@ -26,7 +26,7 @@
 		<h2>View File</h2>
 		<label for="dossier-upload">1. Upload A .Dossier File</label>
 		<br /><br />
-		<input type="file" name="" id="dossier-upload" on:change={read} />
+		<input type="file" name="" id="dossier-upload" onchange={read} />
 		<br />
 		<h4>2. Tap folder to open</h4>
 		<br />

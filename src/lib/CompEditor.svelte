@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
 
-	export let item: DossierItem;
+	interface Props {
+		item: DossierItem;
+	}
+
+	let { item = $bindable() }: Props = $props();
 </script>
 
 <div class="editor">

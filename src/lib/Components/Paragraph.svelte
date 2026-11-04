@@ -1,14 +1,18 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
-	export let item: DossierItem;
+	interface Props {
+		item: DossierItem;
+	}
 
-	$: y = Math.max(item.size.y || 5, 3);
-	$: x = Math.max(item.size.x || 17, 3);
+	let { item = $bindable() }: Props = $props();
+
+	let y = $derived(Math.max(item.size.y || 5, 3));
+	let x = $derived(Math.max(item.size.x || 17, 3));
 </script>
 
 <div class="comp" style="grid-area: span {y} / span {x}">
 	<label for="">{item.label}</label>
-	<textarea type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder" />
+	<textarea type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder"></textarea>
 </div>
 
 <style lang="scss">

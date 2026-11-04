@@ -1,9 +1,13 @@
 <script lang="ts">
 	import type { DossierItem } from '$lib/app/data';
-	export let item: DossierItem;
+	interface Props {
+		item: DossierItem;
+	}
 
-	$: y = Math.max(item.size.y || 8, 2);
-	$: x = Math.max(item.size.x || 6, 2);
+	let { item }: Props = $props();
+
+	let y = $derived(Math.max(item.size.y || 8, 2));
+	let x = $derived(Math.max(item.size.x || 6, 2));
 </script>
 
 <div class="comp" style="grid-area: span {y} / span {x}">

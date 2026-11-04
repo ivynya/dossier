@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
 	import Cover from './Cover.svelte';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
-<slot />
+{@render children?.()}
 <Cover />
 
 <style lang="scss">
