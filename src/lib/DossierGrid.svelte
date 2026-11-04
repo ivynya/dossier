@@ -1,8 +1,8 @@
 <script>
-	import { dossier } from '$lib/app/data';
-	import Label from '$lib/Components/Label.svelte';
-	import LabelInline from '$lib/Components/LabelInline.svelte';
-	import Picture from '$lib/Components/Picture.svelte';
+	import { dossier } from '#lib/app/data.js';
+	import Label from '#lib/Components/Label.svelte';
+	import LabelInline from '#lib/Components/LabelInline.svelte';
+	import Picture from '#lib/Components/Picture.svelte';
 	import Paragraph from './Components/Paragraph.svelte';
 	import Title from './Components/Title.svelte';
 

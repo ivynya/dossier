@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { DossierItem } from '$lib/app/data';
+	import type { DossierItem } from '#lib/app/data.js';
 
 	interface Props {
 		item: DossierItem;

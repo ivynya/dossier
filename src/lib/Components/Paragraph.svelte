@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { DossierItem } from '$lib/app/data';
+	import type { DossierItem } from '#lib/app/data.js';
 	interface Props {
 		item: DossierItem;
 	}
@@ -12,7 +12,8 @@
 
 <div class="comp" style="grid-area: span {y} / span {x}">
 	<label for="">{item.label}</label>
-	<textarea type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder"></textarea>
+	<textarea type="text" spellcheck="false" bind:value={item.value} placeholder="Placeholder"
+	></textarea>
 </div>
 
 <style lang="scss">

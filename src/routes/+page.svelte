@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { dossier } from '$lib/app/data';
-	import DossierGrid from '$lib/DossierGrid.svelte';
-	import FolderBottom from '$lib/FolderBottom.svelte';
-	import FolderTop from '$lib/FolderTop.svelte';
+	import { dossier } from '#lib/app/data.js';
+	import DossierGrid from '#lib/DossierGrid.svelte';
+	import FolderBottom from '#lib/FolderBottom.svelte';
+	import FolderTop from '#lib/FolderTop.svelte';
 
 	function read() {
 		var r = new FileReader();

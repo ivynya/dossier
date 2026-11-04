@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { dossier } from '$lib/app/data';
-	import CompEditor from '$lib/CompEditor.svelte';
-	import DossierGrid from '$lib/DossierGrid.svelte';
-	import FolderBottom from '$lib/FolderBottom.svelte';
-	import FolderTop from '$lib/FolderTop.svelte';
+	import { dossier } from '#lib/app/data.js';
+	import CompEditor from '#lib/CompEditor.svelte';
+	import DossierGrid from '#lib/DossierGrid.svelte';
+	import FolderBottom from '#lib/FolderBottom.svelte';
+	import FolderTop from '#lib/FolderTop.svelte';
 
 	function addItem() {
 		dossier.set({

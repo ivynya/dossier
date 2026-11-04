@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { dossier } from '$lib/app/data';
+	import { dossier } from '#lib/app/data.js';
 	interface Props {
 		active?: boolean;
 	}
